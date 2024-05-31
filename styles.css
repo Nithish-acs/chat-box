@@ -1,0 +1,51 @@
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+}
+
+#container {
+    max-width: 600px;
+    margin: auto;
+}
+
+.hidden {
+    display: none;
+}
+
+#messages {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    height: 300px;  /* Adjust the height as needed */
+    overflow-y: scroll;
+}
+
+.message {
+    margin: 5px 0;
+    padding: 10px;
+    border-radius: 5px;
+    max-width: 75%;
+    word-wrap: break-word;
+}
+
+.my-message {
+    background-color: #d1e7dd;
+    align-self: flex-end;
+    text-align: right;
+}
+
+.other-message {
+    background-color: #f8d7da;
+    align-self: flex-start;
+    text-align: left;
+}
+
+.input-group {
+    display: flex;
+}
+
+.input-group-append {
+    margin-left: 10px;
+}

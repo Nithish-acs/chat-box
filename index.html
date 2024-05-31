@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multiplayer Game Lobby</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <nav class="nav nav-pills nav-justified">
+            <a class="nav-link active" id="createRoomTab" href="#">Create Room</a>
+            <a class="nav-link" id="joinRoomTab" href="#">Join Room</a>
+        </nav>
+        <div id="createRoom" class="mt-4">
+            <h3>Create Room</h3>
+            <form>
+                <div class="form-group">
+                    <label for="roomName">Room Name</label>
+                    <input type="text" class="form-control" id="roomName" placeholder="Room Name">
+                </div>
+                <div class="form-group">
+                    <label for="userNameCreate">Your Name</label>
+                    <input type="text" class="form-control" id="userNameCreate" placeholder="Your Name">
+                </div>
+                <div class="form-group">
+                    <label for="numPlayers">Number of Players</label>
+                    <input type="number" class="form-control" id="numPlayers" placeholder="Number of Players (1-4)" min="1" max="4">
+                </div>
+                <button type="button" class="btn btn-primary" id="createRoomSubmit">Create</button>
+            </form>
+        </div>
+        <div id="joinRoom" class="mt-4 d-none">
+            <h3>Join Room</h3>
+            <form>
+                <div class="form-group">
+                    <label for="roomCode">Room Code</label>
+                    <input type="text" class="form-control" id="roomCode" placeholder="Room Code">
+                </div>
+                <div class="form-group">
+                    <label for="userNameJoin">Your Name</label>
+                    <input type="text" class="form-control" id="userNameJoin" placeholder="Your Name">
+                </div>
+                <button type="button" class="btn btn-primary" id="joinRoomSubmit">Join</button>
+            </form>
+        </div>
+        <div id="room" class="mt-4 d-none">
+            <h3>Room Code: <span id="displayRoomCode"></span></h3>
+            <div id="messages" class="border p-3 mb-3" style="height: 200px; overflow-y: auto;"></div>
+            <div class="input-group">
+                <input type="text" class="form-control" id="messageInput" placeholder="Type a message">
+                <div class="input-group-append">
+                    <button class="btn btn-primary" id="sendMessage" type="button">Send</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="main.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
